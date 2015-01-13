@@ -13,15 +13,16 @@ The frontend page takes a Giantbomb.com url, sends a call to the backend api to 
  1. git clone this repo: git clone git@github.com:ericdefelice/gb_gifmaker.git
  2. Install Node.js
  3. Install all local dependencies: npm install
- 4. Start up the included node.js server: node ./server/server.js 
+ 4. Start up the included node.js server: node server.js 
  5. Go to localhost:8001 to try it out
 
  Note - You need a valid GiantBomb API key to be able to retrieve videos from their API.
 
 # Credits
 
- GIF creation is done using gifshot: https://github.com/yahoo/gifshot
- GiantBomb videos are retrieved using their API: http://www.giantbomb.com/api/
+  GIF creation is done using gifshot: https://github.com/yahoo/gifshot
+  
+  GiantBomb videos are retrieved using their API: http://www.giantbomb.com/api/
  
 # License
 
