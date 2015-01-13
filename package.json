@@ -5,7 +5,7 @@
   "main": "./",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yahoo/gifshot.git"
+    "url": "https://github.com/ericdefelice/gb-gifmatic.git"
   },
   "keywords": [
     "gif",
@@ -15,7 +15,8 @@
     "name": "Eric DeFelice"
   }],
   "scripts": {
-    "preview": "node server/server.js"
+    "start": "node server.js",
+    "preview": "node server.js"
   },
   "devDependencies": {
     "express": "^4.2.0",
@@ -23,8 +24,9 @@
     "jsdom": "2.0.*",
     "jquery": "2.1.*"
   },
-  "engine": {
-    "node": ">= 0.8"
+  "engines": {
+    "npm": "2.1.x",
+    "node": "0.10.x"
   },
   "license": "MIT"
 }
