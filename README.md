@@ -4,8 +4,9 @@ A tool to create gif's from GiantBomb videos.
 
 The frontend page takes a Giantbomb.com url, sends a call to the backend api to then grab the raw video file from the giantbomb API.  Once this process is complete, the configuration options are shown to create the gif.
 
-# Credits:
-
+# Demo
+ 
+ View the demo here: https://gb-gifmatic.herokuapp.com/
 
 # Setup
 
@@ -17,6 +18,9 @@ The frontend page takes a Giantbomb.com url, sends a call to the backend api to 
 
  Note - You need a valid GiantBomb API key to be able to retrieve videos from their API.
 
+# Credits
+
+ This 
 # License
 
  MIT license
