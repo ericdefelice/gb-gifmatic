@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>GiantBomb Gif-Matic | Make Animated GIFs from GiantBomb</title>
+<meta name="description" content="Create awesome animated GIFs from your favorite Giant Bomb videos.">
+<meta name="keywords" content="Gif, gif maker, make a gif, animated gifs">
+<meta property="og:title" content="GiantBomb Gif-Matic">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<!-- Third Party CSS Dependencies -->
+<link rel="stylesheet" href="/css/dependencies/bootstrap.css">
+<link rel="stylesheet" href="/css/dependencies/prism.css">
+<link rel="stylesheet" href="/css/dependencies/select.css">
+
+<link href="css/style.css" rel="stylesheet">
+<link rel="shortcut icon" href="images/favicon.ico">
+
+
+<script>
+if (!Number.prototype.getDecimals) {
+		Number.prototype.getDecimals = function() {
+				var num = this,
+					match = ('' + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+				if (!match)
+						return 0;
+				return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
+		}
+}
+</script>
+</head>
+
+<body>
+  <div class="landing">
+    <center>
+    <div class="landing-box">
+      <h1>Giant Bomb Gif-Matic</h1>
+      <h2>Make GIFs from your favorite GiantBomb videos</h2>
+      <div class="input-group gifbar">
+        <input class="form-control urlbox" type="text" placeholder="Paste GiantBomb URL..." />
+        <span class="input-group-btn">
+         <button class="btn createbutton">LOAD VIDEO</button>
+        </span>
+      </div>
+    </div>
+    </center>
+  </div>
+ 
+
+  <!-- gif config section  -->
+  <section class="gif-config-section v-center" id="gif_config_container" style="display:none">
+    <div>
+      <div class="row">
+        <div class="col-md-4 options-section">
+          <center><h3><b>GIF Configuration Options</b></h3></center>
+          <form class="options-form" action="">
+          <div class="form-group">
+            <label for="GIFType">GIF type</label>
+            <div class="button custom-select">
+              <select name="GIFType" id="GIFType" class="form-control">
+                <option value="animated">Animated</option>
+                <option value="snapshot">Snap Shot</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="gifWidth">GIF Width</label>
+            <div class="input-group">
+              <input name="gifWidth" id="gifWidth" class="form-control" value="200" size="5" type="number"></input>
+              <div class="input-group-addon">px</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="gifHeight">GIF Height</label>
+            <div class="input-group">
+              <input name="gifHeight" id="gifHeight" class="form-control" value="200" size="5" type="number"></input>
+              <div class="input-group-addon">px</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="gifStarttime">GIF Start Time</label>
+            <div class="input-group">
+              <input name="gifStarttime" id="gifStarttime" class="form-control" value="0" size="5" type="number" disabled></input>
+              <div class="input-group-addon">secs</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="interval">Interval</label>
+            <div class="input-group">
+              <input name="interval" id="interval" class="form-control" value=".1" size="5" type="number"></input>
+              <div class="input-group-addon">secs</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="numFrames">Number of Frames</label>
+            <input name="numFrames" id="numFrames" class="form-control" value="10" size="5" type="number"></input>
+          </div>
+          <div class="form-group">
+            <label for="gifText">GIF Text</label>
+            <input name="gifText" id="gifText" class="form-control" value="" size="30" placeholder="Add text here..."></input>
+          </div>
+          <div class="form-group">
+            <label for="fontWeight">Font Weight</label>
+            <div class="button custom-select">
+              <select name="fontWeight" id="fontWeight" class="form-control">
+                <option value="normal">normal</option>
+                <option value="bold">bold</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fontSize">Font Size</label>
+            <div class="input-group">
+              <input name="fontSize" id="fontSize" class="form-control" value="16" size="5" type="number"></input>
+              <div class="input-group-addon">px</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fontFamily">Font Family</label>
+            <div class="button custom-select">
+              <select name="fontFamily" id="fontFamily" class="form-control">
+                <option value="sans-serif">sans-serif</option>
+                <option value="Arial">Arial</option>
+                <option value="Calibri">Calibri</option>
+                <option value="Times New Roman">Times New Roman</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fontColor">Font Color</label>
+            <input type="color" name="fontColor" id="fontColor" class="form-control" value="#FFFFFF" size="5"></input>
+          </div>
+          <div class="form-group">
+            <label for="textAlign">Text Align</label>
+            <div class="button custom-select">
+              <select name="textAlign" id="textAlign" class="form-control">
+                <option value="center">center</option>
+                <option value="left">left</option>
+                <option value="right">right</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="textBaseline">Text Baseline</label>
+            <div class="button custom-select">
+              <select name="textBaseline" id="textBaseline" class="form-control">
+                <option value="bottom">bottom</option>
+                <option value="center">center</option>
+                <option value="top">top</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sampleInterval">Sample Interval</label>
+            <input name="sampleInterval" id="sampleInterval" class="form-control" value="10" size="5" type="number"></input>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Video section -->       
+      <div class="col-md-offset-4" id="video_container" style="display:none">
+        <center>
+          <video width="320" 
+                 height="195" 
+                 controls="" 
+                 id="video" 
+                 tabindex="0">
+            <source type="video/mp4" src="" id="mp4"></source>
+            <p>Your browser does not support the HTML5 Video element.</p>
+          </video>
+        </center>
+      </div>
+      
+      <!-- Create GIF button -->
+      <div class="col-md-offset-4 create_gif_button_container">
+        <center>
+          <span class="options-button-group">
+            <button type="button" id="create-gif" class="btn btn-large btn-primary create-gif-button">Create GIF</button>
+          </span>
+        </center>
+      </div>
+
+      <div class="gif-preview-section">
+        <center>
+        <h3>
+          GIF Preview
+        </h3>
+        <h5>When GIF is created, you can save it and do whatever you like with it.</h5>
+        <h5>Currently using an example video, so GIF creation doesn't quite work yet.</h5>
+        <section class="gifshot-image-preview-section"></section>
+        <div class="placeholder-div hidden">
+          <span class="placeholder-div-dimensions"></span>
+        </div>
+        </center>
+        <div class="progress-bar-container">
+          <progress max="1" value="0" class="gifshot-progress-bar hidden"></progress>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- footer  -->
+  <footer class="footer v-center">
+    <div class="container">
+      <h5>Made by <a href="http://www.ericdefelice.com">Eric DeFelice</a></h5>
+      <h5>All video content property of <a href="http://www.giantbomb.com">GiantBomb</a></h5>
+      <p style="margin: 0">
+        All code on this site is licensed under the
+        <a href="https://github.com/yahoo/gifshot/blob/master/LICENSE.txt">MIT License</a> unless stated.
+      </p>
+    </div>
+  </footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+<script src="/js/bootstrap.js"></script>
+<script src="/js/bootstrap-slider.js"></script>
+<script src="/js/bootbox.min.js"></script>
+<script src="/js/jquery.xdomainajax.js"></script>
+<script src="js/dependencies/gifshot.js"></script>
+<script src="js/dependencies/prism.min.js"></script>
+<script src="js/dependencies/esprima.min.js"></script>
+<script src="js/dependencies/escodegen.min.js"></script>
+<script src="js/dependencies/lodash.min.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>
+

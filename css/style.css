@@ -1,0 +1,249 @@
+html,body {
+	margin:0;
+	font-family:Open Sans;
+	font-size:1rem;
+}
+
+h1 {
+	text-align:center;
+	color:#000000;
+	font-family:Roboto;
+	font-weight:700;
+	font-size:4rem;
+	margin:0;
+	padding:0;
+	letter-spacing:2px;
+}
+
+h2 {
+	text-align:center;
+	font-family:Open Sans;
+	color:#000000;
+	font-weight:400;
+	font-size:1.5rem;
+}
+
+.landing {
+	left:0;
+	top:0;
+	right:0;
+}
+
+.landing-box {
+	padding-top:5rem;
+	padding-bottom:2rem;
+	padding-left:1rem;
+	padding-right:1rem;
+	background:rgba(0,0,0,0.1);
+	border-bottom:1px solid #000000;
+	box-shadow:0 0 4px #000000;
+}
+
+.video_container {
+	padding-top:5rem;
+	padding-bottom:2rem;
+	padding-left:1rem;
+	padding-right:1rem;
+}
+
+.alert-box {
+	display:inline-block;
+	line-height:2.3rem;
+	padding-left:1rem;
+	padding-right:1rem;
+	font-size:0.8rem;
+	max-width:700px;
+	margin-top:1rem;
+	height:2.4rem;
+	border:1px solid rgba(0,0,0,0.1);
+	border-radius:0.3rem;
+	opacity:0;
+}
+
+.gifbar {
+	box-sizing:border-box;
+	max-width:700px;
+	margin-top:2rem;
+	box-shadow:0 0 4px rgba(0,0,0,0.2);
+	border-radius:0.5rem;
+	overflow:hidden;
+	border:2px solid rgba(0,0,0,0.5);
+}
+
+.gifbar input {
+	border:none;
+	box-sizing:border-box;
+	height:3rem;
+	padding:0.5rem;
+	color:#000000;
+}
+
+.gifbar button {
+	border:none;
+	box-sizing:border-box;
+	height:3rem;
+	font-weight:600;
+	letter-spacing:1px;
+	background:#861313;
+	color:#FFFFFF;
+	width:8rem;
+}
+
+.gifbar button:hover {
+	color:#FFFFFF;
+	background:#000000;
+}
+
+.content {
+	margin:auto;
+	margin-top:24.9rem;
+	max-width:1000px;
+	width:100%;
+	padding:1rem;
+}
+
+#video {
+	width:640px;
+	height:360px;
+}
+
+.generate_button {
+	width:640px;
+	font-weight:600;
+	margin-top:0.5rem;
+}
+
+/* GIF Config section */
+
+.gif-config-section {
+  padding-top: 10px;
+  border-bottom: 1px solid #eee; 
+}
+
+.options-section,
+.preview-section {
+  height: 100vh;
+  overflow: auto;
+  border-bottom: 1px solid #eee;
+  border-right: 1px dotted rgba(0,0,0,.2); 
+}
+
+.options-section {
+  overflow-x: hidden;
+  margin-left: 5px;
+  /*background: #f3f3f3;*/
+}
+
+.custom-select { font-size:14px; }
+
+.button {
+  border: 1px solid #bbb;
+  border-radius: .3em;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  background: #f3f3f3; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%); /* W3C */
+}
+
+.create_gif_button_container {
+  padding-top: 30px;
+}
+
+select option {
+  background: #f3f3f3;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* remove standard styling 
+ * for all HTML5 progress enabled browsers
+ */
+ 
+progress
+{
+  /* turn of styling */
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+ 
+  /* no default border in FF and Opera */
+  border: none;
+ 
+  /* Dimensions */
+  width: 300px;
+  height: 40px;
+
+  border-radius: 4px;
+}
+ 
+/* Firefox  */ 
+progress  {
+   background: #f5f5f5;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1)
+}
+progress::-moz-progress-bar {
+    background: #5cb85c;
+}
+progress:not([value])::-moz-progress-bar {
+  background:#fdd;
+}
+ 
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: #f5f5f5;
+}
+progress::-webkit-progress-value {
+    background: #5cb85c;
+}
+progress:not([value])::-webkit-progress-bar {
+  background:#fdd;
+}
+
+.gifshot-image-preview-section {
+  padding-top: 10px;
+}
+
+.placeholder-div {
+  background: #f5f5f5;
+  margin: 0 auto;
+  position: relative;
+}
+
+.placeholder-div-dimensions {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 20px;
+}
+
+.progress-bar-container {
+  padding-top: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Footer section */
+.footer {
+  position: relative;
+  text-align: center;
+  padding-bottom: 30px;
+  margin: 30px 0 0;
+}
+.footer p {
+  font-size: 18px;
+  font-weight: normal;
+  color: #7f8c8d;
+}
+.footer a {
+  color: #400090;
+}

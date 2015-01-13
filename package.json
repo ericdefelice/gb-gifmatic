@@ -1,0 +1,30 @@
+{
+  "name": "giantbomb_gifmatic",
+  "version": "0.0.1",
+  "description": "Web application to create animated GIFs from your favorite GiantBomb videos.",
+  "main": "./",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yahoo/gifshot.git"
+  },
+  "keywords": [
+    "gif",
+    "animated gif"
+  ],
+  "contributors": [{
+    "name": "Eric DeFelice"
+  }],
+  "scripts": {
+    "preview": "node server/server.js"
+  },
+  "devDependencies": {
+    "express": "^4.2.0",
+    "serve-favicon": "2.2.*", 
+    "jsdom": "2.0.*",
+    "jquery": "2.1.*"
+  },
+  "engine": {
+    "node": ">= 0.8"
+  },
+  "license": "MIT"
+}
