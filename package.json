@@ -18,7 +18,7 @@
     "start": "node server.js",
     "preview": "node server.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.2.0",
     "serve-favicon": "2.2.*", 
     "jsdom": "2.0.*",
