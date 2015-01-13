@@ -7,8 +7,8 @@ var app = express();
 var $ = require('jquery')(require("jsdom").jsdom().parentWindow);
 
 // SERVER CONFIGURATION
-app.use(express.static(__dirname + '/../')); // set the static files location
-app.use(favicon(__dirname + '/favicon.ico'));
+app.use(express.static(__dirname + '/')); // set the static files location
+app.use(favicon(__dirname + '/images/favicon.ico'));
 
 // Service any GET requests to the API
 var BASE_URL = 'http://www.giantbomb.com/api/video/';
