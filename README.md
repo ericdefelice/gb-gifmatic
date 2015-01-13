@@ -6,7 +6,7 @@ The frontend page takes a Giantbomb.com url, sends a call to the backend api to 
 
 # Demo
  
- View the demo here: https://gb-gifmatic.herokuapp.com/
+
 
 # Setup
 
@@ -20,8 +20,10 @@ The frontend page takes a Giantbomb.com url, sends a call to the backend api to 
 
 # Credits
 
- This 
+ GIF creation is done using gifshot: https://github.com/yahoo/gifshot
+ GiantBomb videos are retrieved using their API: http://www.giantbomb.com/api/
+ 
 # License
 
- MIT license
+ MIT license - Feel free to use this as you wish.
 
