@@ -1,12 +1,14 @@
 // server.js (Express 4.0)
 var express = require('express');
 var favicon = require('serve-favicon');
+var http    = require('http');
 
 var app = express();
 
 var $ = require('jquery')(require("jsdom").jsdom().parentWindow);
 
 // SERVER CONFIGURATION
+app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + '/')); // set the static files location
 app.use(favicon(__dirname + '/images/favicon.ico'));
 
@@ -61,7 +63,12 @@ app.get('/', function (request, response) {
   response.render('index.html');
 });
 
-// setup app port
-app.listen(8001);
+// launch ======================
+http.createServer(app).listen(app.get('port'), function(){
+  console.log("Express server listening on port " + app.get('port'));
+});
 
-console.log('To preview giantbomb gifmatic, go to localhost:8001');
+// setup app port
+//app.listen(8001);
+
+//console.log('To preview giantbomb gifmatic, go to localhost:8001');
