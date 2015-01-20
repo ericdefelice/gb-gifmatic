@@ -26,7 +26,7 @@ app.get('/api/gb_videos/:vid_id', function (request, response) {
   $.ajax({
       url: req_url,
       type: "get",
-      data: {api_key : GB_API_KEY, field_list : "id,length_seconds,high_url,low_url,video_type,image", format : "jsonp", json_callback : "json_req_callback" },
+      data: {api_key : process.env.GB_API_KEY, field_list : "id,length_seconds,high_url,low_url,video_type,image", format : "jsonp", json_callback : "json_req_callback" },
       dataType: "jsonp",
       jsonpCallback: "json_req_callback",
       timeout: 2000,
