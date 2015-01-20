@@ -20,13 +20,14 @@ var BASE_URL = 'http://www.giantbomb.com/api/video/';
 app.get('/api/gb_videos/:vid_id', function (request, response) {
   
   var req_url = BASE_URL + request.params.vid_id + '/?';
-  //console.log(req_url);
+  var GB_KEY = process.env.GB_API_KEY;
+  console.log(GB_KEY);
 
   // send request to GiantBomb API
   $.ajax({
       url: req_url,
       type: "get",
-      data: {api_key : process.env.GB_API_KEY, field_list : "id,length_seconds,high_url,low_url,video_type,image", format : "jsonp", json_callback : "json_req_callback" },
+      data: {api_key : GB_KEY, field_list : "id,length_seconds,high_url,low_url,video_type,image", format : "jsonp", json_callback : "json_req_callback" },
       dataType: "jsonp",
       jsonpCallback: "json_req_callback",
       timeout: 2000,
@@ -57,7 +58,7 @@ app.get('/api/gb_videos/:vid_id', function (request, response) {
 
 // routes ======================
 app.get('/', function (request, response) {
-  res.render('index.html');
+  response.render('index.html');
 });
 
 // setup app port

@@ -15,8 +15,7 @@
     "name": "Eric DeFelice"
   }],
   "scripts": {
-    "start": "node server.js",
-    "preview": "node server.js"
+    "start": "node app",
   },
   "dependencies": {
     "express": "^4.2.0",
