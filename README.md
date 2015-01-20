@@ -10,7 +10,7 @@ The frontend page takes a Giantbomb.com url, sends a call to the backend api to 
 
 # Setup
 
- 1. git clone this repo: git clone git@github.com:ericdefelice/gb_gifmaker.git
+ 1. git clone this repo: git clone https://github.com/ericdefelice/gb-gifmatic.git
  2. Install Node.js
  3. Install all local dependencies: npm install
  4. Start up the included node.js server: node server.js
