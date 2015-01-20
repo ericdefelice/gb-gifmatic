@@ -55,6 +55,11 @@ app.get('/api/gb_videos/:vid_id', function (request, response) {
 //  response.send(data);
 //};
 
+// routes ======================
+app.get('/', function (request, response) {
+  res.render('index.html');
+});
+
 // setup app port
 app.listen(8001);
 
